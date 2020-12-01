@@ -146,7 +146,7 @@ if __name__=='__main__':
 
 
     # 网络创建，训练过程
-    network = MLP(n_hidden = 12)
+    network = MLP(n_hidden = 5)
     network.train(X_train, y_train, X_valid, y_valid)
 
 
@@ -177,6 +177,5 @@ if __name__=='__main__':
     Y = np.arange(-5,5,0.1)
     X,Y = np.meshgrid(X,Y)
     R = np.sin(X) - np.cos(Y)
-    Z = np.cos(R)
-    ax.plot_surface(X,Y,Z,rstride=1,cstride=1,cmap='rainbow')
+    ax.plot_surface(X,Y,R,rstride=1,cstride=1,cmap='rainbow')
     plt.show()
